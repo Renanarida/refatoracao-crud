@@ -1,0 +1,25 @@
+# Ignorar arquivos de sistema e temporários
+*.log
+*.tmp
+*.bak
+
+# Ignorar scripts de inicialização do XAMPP
+*.bat
+
+# Ignorar diretórios do XAMPP que não devem entrar no git
+apache/
+mysql/
+php/
+tmp/
+
+# Arquivos de configuração locais
+php.ini
+httpd.conf
+
+# Arquivos do sistema (Windows)
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Arquivos ocultos do sistema macOS
+.DS_Store
