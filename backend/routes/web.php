@@ -9,3 +9,19 @@ Route::get('/', function () {
 Route::get('/home', function () {
     return view('index');
 });
+
+Route::get('/cadastro', function () {
+    return view('registrar');
+});
+
+Route::get('/login', function () {
+    return view('login');
+});
+
+Route::get('/visitantes', function () {
+    return view('visitantes');
+});
+
+Route::get('/participantes', function () {
+    return view('participantes');
+});
