@@ -10,8 +10,8 @@ Route::get('/home', function () {
     return view('index');
 });
 
-Route::get('/cadastro', function () {
-    return view('registrar');
+Route::get('/registrar', function () {
+    return view('cadastrar');
 });
 
 Route::get('/login', function () {
