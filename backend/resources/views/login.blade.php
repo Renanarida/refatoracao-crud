@@ -32,7 +32,7 @@
         </form>
 
         <div class="mt-3 text-center">
-            Esqueceu a senha? <a id="link-senha" href="{{ route('password.request') }}">Clique aqui</a>
+            Esqueceu a senha? <a id="link-senha" href="{{ route('password.email') }}">Clique aqui</a>
         </div>
 
         <div class="mt-3 text-center">

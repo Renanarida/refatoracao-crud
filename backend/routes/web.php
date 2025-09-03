@@ -3,6 +3,7 @@
 use App\Http\Controllers\CadastroController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\PasswordResetController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -32,3 +33,5 @@ Route::post('/login', [LoginController::class, 'authenticate'])->name('login.sub
 
 // rota para logout
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+
+Route::post('/esqueci-senha', [PasswordResetController::class, 'sendResetEmail'])->name('password.email');
