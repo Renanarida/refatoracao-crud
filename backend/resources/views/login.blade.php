@@ -36,7 +36,7 @@
         </div>
 
         <div class="mt-3 text-center">
-            Ainda não tem conta? <a id="link-cadastrar" href="{{ route('register') }}">Cadastre-se aqui</a>
+            Ainda não tem conta? <a id="link-cadastrar" href="{{ route('cadastrar') }}">Cadastre-se aqui</a>
         </div>
     </div>
 </body>
