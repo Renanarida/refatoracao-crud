@@ -37,8 +37,8 @@
     </div>
 
     <div class="box-links">
-        <a id="botao-cadastrar" href="{{ url('cadastrar') }}">Cadastre-se</a>
-        <a id="botao-login" href="{{ url('login') }}">Login</a>
+        <a id="botao-cadastrar" href="{{ url('/cadastrar') }}">Cadastre-se</a>
+        <a id="botao-login" href="{{ url('/login') }}">Login</a>
         <form action="{{ url('visitante') }}" method="post">
             @csrf
             <button id="botao-visitante" type="submit">Entrar como visitante</button>
