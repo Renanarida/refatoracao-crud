@@ -1,0 +1,16 @@
+FROM node:20-alpine
+
+WORKDIR /app
+
+COPY . .
+
+RUN npm install
+
+RUN npm run build
+
+# Instala um servidor estático para servir os arquivos
+RUN npm install -g serve
+
+EXPOSE 5173
+
+CMD ["serve", "-s", "dist", "-l", "5173"]
