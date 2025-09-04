@@ -3,35 +3,16 @@
 use App\Http\Controllers\CadastroController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
-use App\Http\Controllers\PasswordResetController;
+// use App\Http\Controllers\PasswordResetController;
 
-Route::get('/', function () {
-    return view('welcome');
+// Rotas da API continuam normais
+Route::prefix('api')->group(function () {
+    Route::post('/login', [LoginController::class, 'login']);
+    Route::post('/cadastrar', [CadastroController::class, 'store']);
+    // outras rotas API
 });
 
-//aqui inicia as rotas
-Route::get('/home', function () {
-    return view('index');
-});
-
-Route::get('/cadastrar', function () {
-    return view('cadastrar');
-})->name('form.cadastrar');
-
-// rota para processar o cadastro
-Route::post('/cadastrar', [CadastroController::class, 'store'])->name('cadastrar');
-
-Route::get('/login', function () {
-    return view('login');
-})->name('form.login');
-
-// rota para exibir login
-Route::get('/login', [LoginController::class, 'login'])->name('login');
-
-// rota para autenticar
-Route::post('/login', [LoginController::class, 'authenticate'])->name('login.submit');
-
-// rota para logout
-Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
-
-Route::post('/esqueci-senha', [PasswordResetController::class, 'sendResetEmail'])->name('password.email');
+// Rotas do React (SPA)
+Route::get('/{any}', function () {
+    return view('react.index');
+})->where('any', '.*');
